@@ -1,0 +1,26 @@
+server:
+  port: 7001
+  servlet:
+    context-path: /salon
+
+spring:
+  application:
+    name: BOOKING-SERVICE
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/salon_booking?autoReconnect=true&failOverReadOnly=false&maxReconnects=10}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:my_secret_password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+#    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+app:
+  jwtSecret: bezKoderSecretKey
+  jwtExpirationMs: 300000
+  jwtRefreshSecret: bezKoodijoijweoijowneo
+  jwtRefreshExpirationMs: 86400000
+  bill-path: /Users/madhuwantha/Documents/Freelancing/Fiverr/ahilendranainka/SalonBooking/salon_new.pdf
+  temp-bill-path: /Users/madhuwantha/Documents/Freelancing/Fiverr/ahilendranainka/SalonBooking/temp/
